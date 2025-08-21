@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --s: 100px; /* control the size */
   --c1: #7079f3;
