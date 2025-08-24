@@ -20,21 +20,24 @@
 <script setup lang="ts">
 import { ref, markRaw } from 'vue'
 import Navbar from '../pages/components/tinybits/NavBar.vue';
-import ViewContainer from './components/mediumbits/ViewContainer.vue';
+import ViewContainer from './components/largebits/ViewContainer.vue';
 import SwapApp from './components/apps/SwapApp.vue';
 import DocsApp from './components/apps/DocsApp.vue';
 import AboutApp from './components/apps/AboutApp.vue';
 import EarnApp from './components/apps/EarnApp.vue';
+import NoteBook from './components/apps/NoteBook.vue';
+import NewsApp from './components/apps/NewsApp.vue';
 
 // ---- Window registry (source-of-truth for the desktop) ----
 const windows = ref([
   { id: 1, title: 'About', zIndex: 1, open: true, component: markRaw(AboutApp)},
-  { id: 2, title: 'News', zIndex: 2, open: false, },
+  { id: 2, title: 'News', zIndex: 2, open: false, component: markRaw(NewsApp)},
   { id: 3, title: 'Swap', zIndex: 3, open: false, component: markRaw(SwapApp) },
   { id: 4, title: 'Earn', zIndex: 4, open: false, component: markRaw(EarnApp)},
   { id: 5, title: 'Pebbles', zIndex: 5, open: false, },
   { id: 6, title: 'Chat', zIndex: 6, open: false, },
-  { id: 7, title: 'Docs', zIndex: 7, open: false, component: markRaw(DocsApp) }
+  { id: 7, title: 'Docs', zIndex: 7, open: false, component: markRaw(DocsApp) },
+  { id: 8, title: 'Notebook', zIndex: 8, open: false, component: markRaw(NoteBook) }
 ])
 
 

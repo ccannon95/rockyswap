@@ -1,5 +1,5 @@
 <template>
-  <div class="swap-app">
+  <div class="app-container">
     <!-- Top action buttons -->
     <div class="menubar">
       <button class="menuitem">Reverse</button>
@@ -10,12 +10,12 @@
     <!-- Retro panel -->
     <div class="panel">
       <!-- FROM row -->
-      <div class="section">
-        <div class="section-title">From</div>
+      <div class="sectionid-1">
+        <div class="section-title">You Pay</div>
         <div class="row">
           <div class="token">
             <div class="dropdown">
-              <button class="token-btn">ETH ▼</button>
+              <button class="button-menu">ETH ▼</button>
               <div class="dropdown-content">
                 <button class="token-item">ETH</button>
                 <button class="token-item">USDC</button>
@@ -31,17 +31,17 @@
       <!-- divider with reverse control -->
       <div class="divider">
         <span class="line"></span>
-        <button class="swap-arrow">⇅</button>
+        <button class="button-menu">⇅</button>
         <span class="line"></span>
       </div>
 
       <!-- TO row -->
-      <div class="section">
-        <div class="section-title">To</div>
+      <div class="sectionid-1">
+        <div class="section-title">You Receive</div>
         <div class="row">
           <div class="token">
             <div class="dropdown">
-              <button class="token-btn">USDC ▼</button>
+              <button class="button-menu">USDC ▼</button>
               <div class="dropdown-content">
                 <button class="token-item">ETH</button>
                 <button class="token-item">USDC</button>
@@ -54,8 +54,9 @@
         </div>
       </div>
 
-      <!-- primary action -->
-      <button class="primary-btn win-btn">Swap</button>
+      <div class="swapwrap">
+      <button class="button-74" id="swap">Swap</button>
+      </div>
     </div>
   </div>
 </template>
@@ -65,32 +66,15 @@
 </script>
 
 <style scoped>
-/* toolbar-style menubar */
-.menubar{
-  display:flex;
-  gap:8px;
-  background:#dcdcdc;
-  padding:6px 8px;
-  border-bottom:1px solid #b0b0b0;
-}
 
-/* outer panel with Win95 bevel */
-.panel{
-  margin:10px;
-  padding:12px;
-  background: var(--c8);
-  border:2px solid #f6f6f6;
-  border-right-color:#808080;
-  border-bottom-color:#808080;
-}
 
 /* section headings + rows */
 .section{ margin-bottom:12px; }
 .section-title{ font-weight:700; margin-bottom:6px; }
 
-.row{
+.row {
   display:grid;
-  grid-template-columns: 180px 1fr; /* token select | amount */
+  grid-template-columns: 120px 1fr; /* token select | amount */
   gap:10px;
   align-items:center;
 }
@@ -133,21 +117,11 @@
 .token-item:hover{ background:#cce0ff; }
 
 /* inputs */
-.amount{ height:32px; }
+.amount{ height:30px; width: 100px }
 
 /* divider with centered reverse button */
-.divider{
-  display:flex;
-  align-items:center;
-  gap:8px;
-  margin:12px 0;
-}
-.divider .line{
-  flex:1;
-  height:1px;
-  background:#a0a0a0;
-  box-shadow:0 1px 0 #fff;
-}
+
+
 .swap-arrow{
   width:28px; height:28px;
   border:2px outset #fff;

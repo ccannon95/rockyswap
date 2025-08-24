@@ -55,34 +55,119 @@
 
 }
 
-/* Buttons */
-button,
-.menuitem,
-.win-btn,
-.primary-btn,
-.swap-arrow {
-  background: var(--c8);
-  border: 2px outset #fff;
-  padding: 4px 10px;
-  font-size: 12px;
-  font-family: "MS Sans Serif", Tahoma, Arial, sans-serif;
+.titlebar {
+  justify-content: space-between;
+  align-items: center;
+  background-color: #00ffff;
+  border-bottom: 2px solid #000;
+  border-top: 2px solid #000;
+  color: #000;
+  cursor: grab;
+  display: flex;
+  font-weight: 600;
+  padding: 5px 10px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  height: 30px
+}
+
+.title-text {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 15px;
+  color:#000000;
+}
+
+.titlebar-right {
+  display: flex;
+  gap: 3px;
+}
+
+.menubar {
+  display: flex;
+  gap: 8px;
+  background: #f6f6f6;
+  padding: 6px 8px;
+  border-bottom: 2px solid #000000;
+}
+
+.menuitem {
+  align-items: center;
+  text-align: center;
+  background-color: #00ffff;
+  border: 2px solid #ff00ff;
+  border-radius: 1px;
+  box-shadow: 3px 3px 0 #ffff00;
+  color: #000;
   cursor: pointer;
-  box-shadow: inset -1px -1px 0 #808080, inset 1px 1px 0 #fff;
+  display: flex;
+  font-weight: 600;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 15px;
+  padding: 0 10px;
+  line-height: 25px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.menuitem:active {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 #ff00ff;
+}
+.menuitem:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 #ff00ff;
 }
 
-button:active,
-.menuitem:active,
-.win-btn:active,
-.primary-btn:active,
-.swap-arrow:active {
-  border: 2px inset #555;
+.content {
+  background-color: #fff3f3;
 }
 
+.panel {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 15px;
+
+  margin-right: 16px;
+  border: 2px solid #b8b8b8;
+}
+
+.sectionid-1 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 15px;
+  padding: 6px;
+  border: 3px solid;
+}
+
+.swapwrap {
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divider { 
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 6px;
+}
+
+.divider .line {
+  flex: 1;
+  height: 2px;
+  background: #00ffff;
+  box-shadow: 0 2px 0 #000;
+}
 /* Inputs */
 input[type="text"],
 select,
 textarea {
-  font-family: "MS Sans Serif", Tahoma, Arial, sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-size: 13px;
   padding: 6px;
   border: 2px solid #8f8f8f;
@@ -99,4 +184,115 @@ textarea {
 }
 .token-item:hover {
   background: #cce0ff;
+}
+
+.caption-btn {
+  background: #ffff00;         /* yellow base */
+  color: #000;                 /* black text/icon */
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 14px;             /* tweak per your titlebar height */
+  font-weight: 700;
+  border: 2px solid #000;
+  border-radius: 6px;          /* round but not a full pill */
+  width: 28px;                 /* keeps them square-ish */
+  height: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  /* brutalist magenta shadow */
+  box-shadow: 3px 3px 0 #ff00ff;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+.win-btn {
+  background: #ffff00;
+  color: #000;
+  font-size: 12px;
+  font-weight: 700;
+  border: 2px solid #000;
+  border-radius: 3px;
+  width: 25px;
+  height: 23px;
+  box-shadow: 1px 0 #ff00ff;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+.caption-btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 #ff00ff;
+}
+
+.caption-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 #ff00ff;
+}
+
+.win-window {
+  background: #f6f6f6;
+  width: 45%;
+  height: 50%;
+  border-left: 2px solid #000000;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  position: absolute;
+  border-radius: 3px;
+  overflow: hidden;
+}
+/* CSS */
+.button-74 {
+  background-color: #ffff00;
+  border: 2px solid #000;
+  border-radius: 2px;
+  box-shadow: 2px 2px 5px #ff00ff;
+  color: #000;
+  cursor: pointer;
+  display: flex;
+  font-weight: 600;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-74:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 #ff00ff;
+}
+.button-74:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 #ff00ff;
+}
+
+.button-menu {
+  background-color: #ffff00;
+  border: 2px solid #000;
+  border-radius: 15px;
+  box-shadow: 3px 3px 0 #ff00ff;
+  color: #000;
+  cursor: pointer;
+  display: flex;
+  font-weight: 600;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+  padding: 5px 18px;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.button-menu:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 #ff00ff;
+}
+.button-menu:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 #ff00ff;
 }

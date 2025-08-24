@@ -3,7 +3,7 @@
 
     <div class="section">
       <div class="section-title">Project Links</div>
-      <ul style="margin:0; padding-left:auto; line-height:1.6;">
+      <ul style="margin:0; padding-left: 6px; line-height:1.6;">
         <li><a href="https://github.com/<your-org>/<your-repo>" target="_blank">GitHub Repository</a></li>
         <li><a href="https://www.seismic.systems/" target="_blank">Seismic Website</a></li>
         <li><a href="https://docs.<your-domain>.com" target="_blank">Documentation (placeholder)</a></li>

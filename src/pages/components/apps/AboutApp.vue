@@ -1,20 +1,31 @@
 <template>
-  <div class="panel">
+  <div class="app-container">
+    <!-- Top action buttons -->
     <div class="menubar">
       <button class="menuitem">About</button>
       <button class="menuitem">Credits</button>
+      <button class="menuitem">Rocky</button>
     </div>
 
-    <div class="section">
-      <div class="section-title">RockySwap (Seismic ETH)</div>
-      <p style="margin:0;">
-        A retro Windows-95 styled DEX on a zk-swap ETH fork. Private tags in Solidity keep your flows hidden.
-      </p>
+    <!-- Retro panel -->
+    <div class="panel">
+      <!-- FROM row -->
+      <div class="sectionid-1">
+        <div class="section-title">RockySwap</div>
+        <p id="info">A Dex for the seismic blockchain. More info to come soon.</p>
+      </div>
     </div>
 
-    <div class="section">
-      <div class="section-title">Version</div>
-      <p style="margin:0;">Alpha (devnet)</p>
+      <div class="divider">
+        <span class="line"></span>
+      </div>
+
+ 
+    <div class="panel">
+      <div class="sectionid-1">
+        <div class="section-title">Version 0.1.0</div>
+        <p id="info">Currently in prototyping to launch on devnet</p>
+      </div>
     </div>
   </div>
 </template>

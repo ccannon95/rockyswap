@@ -45,6 +45,39 @@
               <button>Claim</button>
             </td>
           </tr>
+          <tr>
+            <td>PEBBLES Single Stake</td>
+            <td>19%</td>
+            <td>500 PEBBLES</td>
+            <td>12.7 PEBBLES</td>
+            <td>
+              <button>Stake</button>
+              <button>Unstake</button>
+              <button>Claim</button>
+            </td>
+          </tr>
+          <tr>
+            <td>PEBBLES Single Stake</td>
+            <td>19%</td>
+            <td>500 PEBBLES</td>
+            <td>12.7 PEBBLES</td>
+            <td>
+              <button>Stake</button>
+              <button>Unstake</button>
+              <button>Claim</button>
+            </td>
+          </tr>
+          <tr>
+            <td>PEBBLES Single Stake</td>
+            <td>19%</td>
+            <td>500 PEBBLES</td>
+            <td>12.7 PEBBLES</td>
+            <td>
+              <button>Stake</button>
+              <button>Unstake</button>
+              <button>Claim</button>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -55,13 +88,13 @@
 
 <style scoped>
 .earn-window {
-  border: 2px solid #000;
-  background: #c0c0c0;
-  width: 700px;
-  margin: 20px auto;
-  box-shadow: 3px 3px #808080;
+  display: flex;
+  justify-content: center;  /* center horizontally */
+  align-items: center;      /* center vertically if you want */
+  padding: 5px;            /* equal padding on all sides */
+  height: 100%;             /* make sure it fills parent */
+  box-sizing: border-box;   /* padding counts inside width */
 }
-
 .window-titlebar {
   background: linear-gradient(to right, navy, darkblue);
   color: #fff;

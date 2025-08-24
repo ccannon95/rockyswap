@@ -1,39 +1,48 @@
-# rockyswap
+## Palette Review
 
-This template should help get you started developing with Vue 3 in Vite.
+1. **Cyan `#00ffff`**
 
-## Recommended IDE Setup
+   * Contrast with black: 16.75 → AAA safe even for tiny text.
+   * Works very well as a **background for text** (big cyan block, black text on top).
+   * Usability: readable at all sizes, not overwhelming if used in panels/sections.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+2. **Magenta `#ff00ff`**
 
-## Type Support for `.vue` Imports in TS
+   * Contrast with black: \~6.7 → WCAG AA for large text, borderline for body text.
+   * Usability: too heavy for body backgrounds, but great for **titlebars, accent bars, hover states, or icon fills**.
+   * If used as a background, limit to short headlines or icons.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+3. **Yellow `#ffff00`**
 
-## Customize configuration
+   * Contrast with black: 19.56 → “super” contrast.
+   * Usability: perfect for **CTA buttons** or “warning/highlight” areas.
+   * But visually overwhelming if used too much → keep it for *action elements only*.
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+4. **Black `#000000`**
 
-## Project Setup
+   * Universal text color. Works across all three brights.
 
-```sh
-npm install
-```
+---
 
-### Compile and Hot-Reload for Development
+## Application Strategy
 
-```sh
-npm run dev
-```
+* **Background hierarchy**
 
-### Type-Check, Compile and Minify for Production
+  * Primary sections: cyan (#00ffff) with black text.
+  * Accents/stripes: magenta (#ff00ff) in limited areas (e.g., window headers).
+  * Interactive: yellow (#ffff00) for buttons → ensures CTAs pop immediately.
 
-```sh
-npm run build
-```
+* **Text hierarchy**
 
-### Lint with [ESLint](https://eslint.org/)
+  * Body = black on cyan.
+  * Headlines = black on magenta (since contrast is just high enough).
+  * Buttons = black text on yellow.
 
-```sh
-npm run lint
-```
+* **Accessibility**
+
+  * Cyan + black is safe for paragraphs.
+  * Magenta should never carry paragraphs of text — only short bold headlines.
+  * Yellow buttons with black text = highly accessible and attention-grabbing.
+
+---
+
